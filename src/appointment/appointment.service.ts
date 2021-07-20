@@ -5,7 +5,7 @@ import { Appointment } from './entities/appointment.entity';
 
 @Injectable()
 export class AppointmentService extends TypeOrmCrudService<Appointment> {
-	constructor(@InjectRepository(Appointment) repo) {
-		super(repo);
-	}
+  constructor(@InjectRepository(Appointment) repo) {
+    super(repo);
+  }
 }

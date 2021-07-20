@@ -4,20 +4,20 @@ import { UserService } from './user.service';
 import { User } from './entities/user.entity';
 
 @Crud({
-	model: {
-		type: User,
-	},
-	routes: {
-		only: [
-			'getOneBase',
-			'getManyBase',
-			'createOneBase',
-			'replaceOneBase',
-			'updateOneBase',
-		],
-	},
+  model: {
+    type: User,
+  },
+  routes: {
+    only: [
+      'getOneBase',
+      'getManyBase',
+      'createOneBase',
+      'replaceOneBase',
+      'updateOneBase',
+    ],
+  },
 })
 @Controller('user')
 export class UserController implements CrudController<User> {
-	constructor(public service: UserService) {}
+  constructor(public service: UserService) {}
 }

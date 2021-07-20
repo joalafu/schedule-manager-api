@@ -3,10 +3,8 @@ import { UserService } from './user.service';
 import { UserController } from './user.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserRepository } from './entities/user.repository';
-import { User } from './entities/user.entity';
-
 @Module({
-	imports: [TypeOrmModule.forFeature([User])],
+	imports: [TypeOrmModule.forFeature([UserRepository])],
 	controllers: [UserController],
 	providers: [UserService],
 })

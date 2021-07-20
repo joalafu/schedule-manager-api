@@ -1,21 +1,20 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
 
 @Entity()
-export class Appointment {
+export class Appointment extends BaseEntity{
 	@PrimaryGeneratedColumn()
-	@ApiProperty()
 	id: number;
 
-	@Column()
 	@ApiProperty()
+	@Column()
 	startDate: Date;
 
-	@Column()
 	@ApiProperty()
+	@Column()
 	endDate: Date;
 
-	@Column()
 	@ApiProperty()
+	@Column()
 	going: boolean;
 }

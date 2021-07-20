@@ -1,6 +1,10 @@
 # dotenv environment variables file
 .env
 
+# comandos txt
+*.txt
+.prettierrc
+
 # compiled output
 /dist
 /node_modules

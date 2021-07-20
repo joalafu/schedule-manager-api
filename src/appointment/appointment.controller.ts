@@ -1,4 +1,5 @@
 import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Crud, CrudController } from '@nestjsx/crud';
 import { AppointmentService } from './appointment.service';
 import { Appointment } from './entities/appointment.entity';
@@ -17,6 +18,7 @@ import { Appointment } from './entities/appointment.entity';
     ],
   },
 })
+@ApiTags('Appointments')
 @Controller('appointment')
 export class AppointmentController implements CrudController<Appointment> {
   constructor(public service: AppointmentService) {}
